@@ -36,3 +36,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local working notes (not for public repo)
+PORTFOLIO_ACTION_BRIEF.md

@@ -1,4 +1,5 @@
 import * as React from 'react';
+/* oxlint-disable jsx-a11y/prefer-tag-over-role -- ItemGroup 以 role=list 提供列表语义（base-ui 组合模式） */
 import { mergeProps } from '@base-ui/react/merge-props';
 import { useRender } from '@base-ui/react/use-render';
 import { cva, type VariantProps } from 'class-variance-authority';

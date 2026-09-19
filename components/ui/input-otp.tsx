@@ -6,6 +6,8 @@ import { OTPInput, OTPInputContext } from 'input-otp';
 import { cn } from '@/lib/utils';
 import { MinusIcon } from 'lucide-react';
 
+/* oxlint-disable jsx-a11y/prefer-tag-over-role -- OTP 分组分隔符带子元素，div+role=separator 为约定实现 */
+
 function InputOTP({
   className,
   containerClassName,

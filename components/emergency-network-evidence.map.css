@@ -1,0 +1,16 @@
+.emergency-panel--path {
+  grid-template-columns: 1fr !important;
+  gap: 44px;
+}
+
+.emergency-panel--path .emergency-map-reader__map {
+  aspect-ratio: 1.88;
+}
+
+.emergency-panel--path .emergency-steps {
+  width: min(860px, 100%);
+}
+
+@media (max-width: 720px) {
+  .emergency-panel--path .emergency-map-reader__map { aspect-ratio: 1.08; }
+}

@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+/* oxlint-disable jsx-a11y/anchor-has-content -- 链接内容经 render 插槽由调用方传入（children 在 props 中） */
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {

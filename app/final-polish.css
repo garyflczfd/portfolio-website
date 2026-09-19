@@ -1,0 +1,567 @@
+:root {
+  --font-ui: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  --paper: #f5f6f3;
+  --surface: #ffffff;
+  --ink: #202b28;
+  --muted: #626f6b;
+  --line: #d7ddda;
+  --teal: #5f887e;
+  --sea: var(--teal);
+  --soft: var(--muted);
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-ui) !important;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+*,
+*::before,
+*::after {
+  font-family: var(--font-ui) !important;
+  font-variant-numeric: tabular-nums;
+}
+
+em {
+  font-family: inherit !important;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+a,
+button,
+dt,
+dd,
+li,
+figcaption {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+h1 { line-height: 1.02 !important; }
+h2,
+h3 { line-height: 1.08 !important; }
+
+strong,
+b,
+.portfolio-nav__mark,
+.wordmark {
+  font-weight: 700 !important;
+}
+
+.eyebrow,
+.page-kicker,
+.section-kicker,
+.project-status,
+.project-index-card__top,
+.meta-label,
+.status {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.portfolio-v3,
+.portfolio-shell,
+.case-page {
+  --paper: #f5f6f3;
+  --surface: #ffffff;
+  --ink: #202b28;
+  --muted: #626f6b;
+  --line: #d7ddda;
+  --teal: #5f887e;
+  --sea: var(--teal);
+  --soft: var(--muted);
+  background: var(--paper) !important;
+  color: var(--ink);
+}
+
+img,
+svg,
+canvas {
+  max-width: 100%;
+}
+
+.portfolio-nav,
+.portfolio-page,
+.portfolio-footer,
+.portfolio-cover,
+.home-workway,
+.project-list-v3,
+.home-method-entry {
+  width: min(1480px, calc(100% - 80px));
+}
+
+.portfolio-nav {
+  height: 76px;
+}
+
+.portfolio-nav__mark {
+  letter-spacing: -0.02em !important;
+}
+
+.portfolio-nav nav,
+.portfolio-nav__cta,
+.portfolio-nav__mark span {
+  letter-spacing: 0.03em !important;
+}
+
+.portfolio-cover {
+  min-height: min(760px, calc(100svh - 100px));
+  background: #253832;
+}
+
+.portfolio-cover__veil {
+  background: linear-gradient(90deg, rgba(20, 37, 32, .86) 0%, rgba(20, 37, 32, .66) 42%, rgba(20, 37, 32, .16) 78%), linear-gradient(0deg, rgba(20, 37, 32, .52), transparent 48%);
+}
+
+.cover-asset {
+  filter: saturate(.7) contrast(1.02) brightness(.9);
+}
+
+.portfolio-cover__meta,
+.portfolio-cover__label,
+.portfolio-cover__index {
+  letter-spacing: 0.06em !important;
+}
+
+.portfolio-cover h1 {
+  font-size: clamp(42px, 6.5vw, 96px);
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.portfolio-cover h1 span,
+.portfolio-cover h1 em {
+  display: block;
+}
+
+.home-workway,
+.home-method-entry,
+.project-row,
+.portfolio-footer {
+  border-color: var(--line);
+}
+
+.project-row {
+  grid-template-columns: 72px minmax(0, 1fr) 92px 128px;
+  min-height: 190px;
+}
+
+.project-row:hover {
+  padding-left: 0;
+  background: rgba(95, 136, 126, .045);
+}
+
+.project-output {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600 !important;
+  line-height: 1.65;
+}
+
+.project-evidence-preview {
+  position: relative;
+  display: block;
+  min-height: 116px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: #eef3f4;
+}
+
+.project-evidence-preview strong,
+.project-evidence-preview span {
+  display: block;
+  font-size: 11px;
+}
+
+.project-evidence-preview strong { color: var(--ink); }
+.project-evidence-preview span { margin-top: 2px; color: var(--muted); }
+.q2-mini-bars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; align-items: end; height: 64px; margin-top: 8px; }
+.q2-mini-bars i { position: relative; display: block; height: var(--q2-share); min-height: 20px; margin: 0; background: var(--teal); font-style: normal; }
+.q2-mini-bars b, .q2-mini-bars em { position: absolute; right: 0; left: 0; color: var(--ink); font-size: 9px; font-style: normal; text-align: center; }
+.q2-mini-bars b { bottom: 2px; color: #fff; }
+.q2-mini-bars em { bottom: 100%; margin-bottom: 2px; }
+.project-credit { display: grid; gap: 3px; margin-top: 12px; padding-left: 10px; border-left: 2px solid var(--teal); }
+.project-credit b, .project-credit span { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.project-credit b { color: var(--ink); }.project-index-card h2, .case-hero h1 { font-size: clamp(30px, 4vw, 56px);
+  line-height: 1.08 !important;
+  letter-spacing: -0.02em !important; }.project-index-card__premise, .case-lead, .page-intro > p, .about-ledger dd, .case-logic dd { font-size: 16px;
+  line-height: 1.75; }
+
+.method-chips i,
+.fact-tags span,
+.project-index-card__meta span {
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--muted);
+  font-style: normal;
+}.home-method-entry h2, .page-intro h1, .portfolio-footer h2, .case-page .flight-intro h2, .flight-copy h2, .daidong-intro h2, .daidong-section h2 { letter-spacing: -0.02em !important;
+  line-height: 1.08 !important; }
+
+.portfolio-footer {
+  align-items: center;
+  min-height: 84px;
+  padding: 26px 0;
+}
+
+.portfolio-footer h2 {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 600 !important;
+}
+
+.portfolio-grid {
+  border-color: var(--line);
+  background: var(--line);
+}
+
+.project-index-card {
+  border-radius: 0;
+  background: var(--surface);
+}
+
+.project-index-card__image img {
+  filter: saturate(.78) brightness(.94);
+}
+
+.project-index-card__wash {
+  background: linear-gradient(90deg, rgba(24, 42, 37, .04), rgba(24, 42, 37, .16));
+}
+
+.page-intro {
+  padding-top: 86px;
+}
+
+.case-hero {
+  min-height: 390px;
+  background: #edf1ef !important;
+}
+
+.case-hero--daidong { background: #f1ede7 !important; }
+.case-hero--driverless-trust { background: #edf2f4 !important; }
+.case-hero--emergency-network { background: #f3eee6 !important; }
+.case-hero--huashu { background: #e6eee9 !important; }
+
+.case-hero__image::after {
+  background: linear-gradient(90deg, rgba(245, 246, 243, .95), rgba(245, 246, 243, .36)) !important;
+}
+
+.case-role,
+.case-logic,
+.case-content,
+.explorer-section,
+.driverless-evidence,
+.daidong-explorer,
+.emergency-evidence,
+.flight-shell,
+.flight-boundary {
+  max-width: 1480px !important;
+  margin-inline: auto !important;
+}
+
+.case-logic {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  padding: 40px clamp(20px, 8vw, 140px) 58px;
+  border-bottom: 1px solid var(--line);
+  background: var(--line);
+}
+
+.case-logic article {
+  min-height: 146px;
+  padding: 18px;
+  background: var(--surface);
+}
+
+.case-logic article > span {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.case-logic h2 {
+  margin: 10px 0 8px;
+  font-size: 20px;
+}
+
+.case-logic article > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.evidence-matrix {
+  display: grid;
+  gap: 1px;
+  margin: 52px 0 112px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.evidence-matrix article {
+  display: grid;
+  grid-template-columns: minmax(250px, .55fr) minmax(0, 1.45fr);
+  gap: 40px;
+  padding: 30px;
+  background: var(--surface);
+}
+
+.evidence-matrix article > header span {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.evidence-matrix h2 {
+  margin: 12px 0 0;
+  font-size: clamp(24px, 2.5vw, 38px);
+}
+
+.evidence-matrix h2 small {
+  color: var(--teal);
+  font-size: .55em;
+}
+
+.evidence-matrix dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 30px;
+  margin: 0;
+}
+
+.evidence-matrix dl > div {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 14px;
+  padding: 11px 0;
+  border-top: 1px solid var(--line);
+}
+
+.evidence-matrix dt {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.evidence-matrix dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.dataset-card,
+.questionnaire-distribution,
+.effect-chart,
+.dimension-chart,
+.translation-grid article,
+.emergency-map-reader,
+.emergency-evidence article {
+  border: 1px solid var(--line) !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+}
+
+.dataset-card,
+.questionnaire-distribution,
+.effect-chart {
+  background: #eef3f4 !important;
+}
+
+.dimension-chart {
+  background: #f3f0ea !important;
+}
+
+.case-page .flight-story,
+.case-page .flight-shell,
+.case-page .flight-boundary {
+  background: var(--paper) !important;
+}
+
+.case-page .flight-intro {
+  background: #e6eee9 !important;
+}
+
+.case-page .flight-stage {
+  border: 1px solid var(--line) !important;
+  box-shadow: none !important;
+}
+
+.case-page .image-field {
+  background-image: linear-gradient(120deg, rgba(17, 54, 48, .08), rgba(214, 235, 227, .06)), url('/images/huashu-field-web.png') !important;
+}
+
+.case-page .image-space {
+  background-image: linear-gradient(120deg, rgba(16, 61, 51, .12), rgba(218, 238, 228, .04)), url('/images/huashu-space-web.png') !important;
+}
+
+.route-figure img,
+.project-data-ledger figure img,
+.emergency-evidence figure img {
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+[class*='card'],
+[class*='panel'],
+[class*='figure'] {
+  border-radius: 0;
+}
+
+@media (max-width: 800px) {
+  .portfolio-nav,
+  .portfolio-page,
+  .portfolio-footer,
+  .portfolio-cover,
+  .home-workway,
+  .project-list-v3,
+  .home-method-entry {
+    width: min(100% - 38px, 1480px);
+  }
+
+  .project-row {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .project-status {
+    display: flex;
+    grid-column: 2;
+  }
+
+  .project-evidence-preview {
+    grid-column: 2;
+    width: min(180px, 100%);
+  }
+
+  .case-logic,
+  .evidence-matrix article,
+  .evidence-matrix dl {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-matrix article {
+    gap: 22px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .portfolio-nav {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 14px;
+    min-height: 66px;
+    height: auto;
+  }
+
+  .portfolio-nav__mark span,
+  .portfolio-nav__cta {
+    display: none;
+  }
+
+  .portfolio-nav nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 11px;
+  }
+
+  .portfolio-nav nav a {
+    padding: 23px 0 20px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .portfolio-cover {
+    min-height: 620px;
+  }
+
+  .portfolio-cover__content {
+    padding: 22px;
+  }
+
+  .portfolio-cover h1 {
+    font-size: clamp(42px, 12vw, 48px);
+  }
+
+  .portfolio-cover h1 span,
+  .portfolio-cover h1 em {
+    white-space: nowrap;
+  }
+
+  .portfolio-cover__bottom p {
+    font-size: 14px;
+    line-height: 1.65;
+  }.project-index-card h2, .case-hero h1 { font-size: 32px !important; }
+
+  .page-intro h1 {
+    font-size: 42px !important;
+  }
+
+  .case-logic {
+    padding: 30px 19px 44px;
+  }
+
+  .case-logic {
+    grid-template-columns: 1fr;
+  }
+
+  .case-logic article {
+    min-height: 0;
+  }
+
+  .evidence-matrix {
+    margin: 38px 0 80px;
+  }
+
+  .evidence-matrix dl > div {
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .driverless-panel,
+  .explorer-panel,
+  .daidong-panel,
+  .flight-shell,
+  .flight-boundary {
+    min-width: 0;
+  }
+}
+
+

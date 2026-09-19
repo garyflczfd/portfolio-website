@@ -1,5 +1,6 @@
 'use client';
 
+/* oxlint-disable jsx-a11y/label-has-associated-control -- htmlFor 由调用方通过 props 传入（peer 关联模式） */
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';

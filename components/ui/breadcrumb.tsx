@@ -5,6 +5,8 @@ import { useRender } from '@base-ui/react/use-render';
 import { cn } from '@/lib/utils';
 import { ChevronRightIcon, MoreHorizontalIcon } from 'lucide-react';
 
+/* oxlint-disable jsx-a11y/prefer-tag-over-role -- 面包屑当前页项：span+role=link 表示不可点击的当前位置（shadcn 约定） */
+
 function Breadcrumb({ className, ...props }: React.ComponentProps<'nav'>) {
   return (
     <nav

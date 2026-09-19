@@ -1,5 +1,6 @@
 'use client';
 
+/* oxlint-disable jsx-a11y/prefer-tag-over-role, jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions -- 附加组件点击聚焦输入框为便捷行为；键盘用户可直接 Tab 至输入框 */
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 

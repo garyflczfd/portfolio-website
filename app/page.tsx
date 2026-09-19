@@ -1,24 +1,74 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import type { CSSProperties } from 'react';
+import { PortfolioFooter, PortfolioNav } from '@/components/portfolio-nav';
+import { publicPortfolioProjects } from '@/lib/portfolio';
+import './portfolio-home.css';
+import './portfolio-cover.css';
+import './portfolio-pages.css';
+import './final-polish.css';
 
-const projects = [
-  { href: '/projects/pingyao', number: '01', title: '瓶窑老街更新', label: '文商旅前期策划 · 实习项目', description: '从老街、窑山与民艺资源出发，讨论一条可以被体验、被停留、也能被运营的微度假路径。', contribution: '现场调研 · 整体及关键节点建模 · 汇报细化', tone: 'clay' },
-  { href: '/projects/driverless-trust', number: '02', title: '无人驾驶，如何建立信任', label: '用户研究 · 个人分析', description: '将问卷与访谈材料转译为可解释的信任问题，并形成产品与沟通层面的建议。', contribution: '负责分析与结论', tone: 'blue' },
-  { href: '/projects/emergency-network', number: '03', title: '应急配送网络如何布局', label: 'GIS · 空间决策研究', description: '以抗蛇毒血清配送为目标，比较需求风险、道路可达性、候选点与无人机航线。', contribution: '问题拆解 · 数据搜集 · 空间分析 · GPA 演示', tone: 'map' },
-  { href: '/projects/qingyuan', number: '04', title: '庆元城市更新交付', label: '城市更新 · 实际项目', description: '把分散的房屋与现状信息组织为可读、可用、可进入汇报体系的空间成果。', contribution: '房屋信息整理 · 现状图斑／图则 · 汇报参与', tone: 'ink' },
-];
+/* oxlint-disable next/no-img-element -- Existing portfolio assets use explicit dimensions and optimized WebP/static sources. */
+
+const projects = publicPortfolioProjects.map((project, index) => ({
+  no: project.publicNo ?? project.no,
+  kind: project.english,
+  title: project.title,
+  summary: project.premise,
+  methods: project.keywords,
+  tone: (['blue', 'sand', 'green'][index % 3]) as 'blue' | 'sand' | 'green',
+  href: `/projects/${project.slug}`,
+  proof: project.proof,
+  output: project.output,
+  slug: project.slug,
+  states: [project.stage, project.time].filter(Boolean),
+}));
+
+export const metadata: Metadata = {
+  title: '金科佚｜空间策略、GIS 与数据研究作品集',
+  description: '金科佚的求职作品集：以真实项目材料呈现空间分析、GIS、数据研究、策略判断与方案表达。',
+  openGraph: {
+    type: 'website',
+    title: '金科佚｜空间策略、GIS 与数据研究作品集',
+    description: '金科佚的求职作品集：以真实项目材料呈现空间分析、GIS、数据研究、策略判断与方案表达。',
+    images: [{ url: '/og/og-default.jpg', width: 1200, height: 630, alt: '金科佚作品集' }],
+  },
+};
 
 export default function Home() {
-  return <main>
-    <nav className="topbar"><Link className="wordmark" href="#top" aria-label="返回首页">JKY<span>／</span>PORTFOLIO</Link><div className="nav-links"><a href="#work">精选项目</a><a href="#method">工作方式</a></div></nav>
-    <header className="hero" id="top">
-      <div className="eyebrow">2027 GRADUATE · URBAN &amp; RURAL PLANNING</div>
-      <h1>城市空间与<br /><em>策略研究。</em></h1>
-      <div className="hero-bottom"><p>金科佚｜浙江工业大学城乡规划本科<br />关注文商旅前期策划、城市更新与空间决策。</p><a className="scroll-link" href="#work">向下浏览 <span>↓</span></a></div>
-      <div className="hero-grid" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><b>01° 研究<br />02° 空间<br />03° 落地</b></div>
-    </header>
-    <section className="intro-section"><p className="section-kicker">ABOUT THE WORK</p><div className="intro-copy"><p>我把调研、数据分析和空间表达放在同一条工作链里：先确认真实问题，再把判断落到产品、场景与可执行的下一步。</p><p className="muted">这里不展示虚构的经营结果。每个项目都会区分原始事实、团队方案、个人交付与作品集阶段的深化判断。</p></div></section>
-    <section className="work-section" id="work"><div className="section-head"><p className="section-kicker">SELECTED WORK</p><span>04 PROJECTS</span></div><div className="projects-grid">{projects.map((project) => <Link className={`project-card ${project.tone}`} href={project.href} key={project.href}><div className="project-art" aria-hidden="true"><span>{project.number}</span><i /><i /><i /></div><div className="project-meta"><span>{project.label}</span><b>{project.number}</b></div><h2>{project.title}</h2><p>{project.description}</p><footer><span>{project.contribution}</span><strong>查看项目 <i>↗</i></strong></footer></Link>)}</div></section>
-    <section className="method-section" id="method"><div><p className="section-kicker">HOW I WORK</p><h2>从证据出发，<br />回到真实场地。</h2></div><ol><li><b>01</b><div><h3>识别问题</h3><p>踏勘、资料、访谈与数据不是装饰；它们用来界定真正值得解决的矛盾。</p></div></li><li><b>02</b><div><h3>形成判断</h3><p>把资源、客群、动线、需求与约束放在一起，寻找可被验证的策略。</p></div></li><li><b>03</b><div><h3>表达并推进</h3><p>将结论转化为空间、产品、图件与实施动作，让不同协作方能够继续工作。</p></div></li></ol></section>
-    <footer className="site-footer"><span>© 2026 JIN KEYI</span><span>URBAN SPACE &amp; STRATEGY RESEARCH</span></footer>
-  </main>;
+  return (
+    <main className="portfolio-v3">
+      <PortfolioNav current="home" />
+
+      <section className="portfolio-cover" id="profile" aria-labelledby="profile-title">
+        <div className="portfolio-cover__mosaic" aria-hidden="true">
+          <img className="cover-asset cover-asset--space" src="/images/chaoguo-aerial.png?v=3" alt="" />
+          <img className="cover-asset cover-asset--gis" src="/images/serum-route-clean.jpg" alt="" />
+          <img className="cover-asset cover-asset--research" src="/images/chaoguo-temple-scene-clean.jpg" alt="" />
+          <img className="cover-asset cover-asset--scene" src="/images/chaoguo-street-clean.png?v=1" alt="" />
+        </div>
+        <div className="portfolio-cover__veil" aria-hidden="true" />
+        <div className="portfolio-cover__content">
+          <p className="portfolio-cover__meta">JIN KEYI / 2027届本科生 · 城乡规划</p>
+          <div><p className="portfolio-cover__label">PERSONAL PORTFOLIO</p><h1 id="profile-title"><span>能读空间，</span><em>也能讲清问题。</em></h1></div>
+        <div className="portfolio-cover__bottom"><p>从场地与资料中发现问题，用空间分析、数据研究与场景表达组织判断。面向文旅策划、城市更新、空间策略及行业方案岗位。</p><Link href="/projects">查看 4 个代表案例 <b>↓</b></Link></div>
+        </div>
+        <aside className="portfolio-cover__index"><span>PROFILE / 01</span><b>SPACE × DATA × STORY</b><p>空间解读<br />研究分析<br />方案表达</p></aside>
+      </section>
+
+      <section className="home-workway" aria-label="工作方式">
+        <p className="eyebrow"><i /> HOW I WORK</p>
+        <p>先读问题，再组织证据；最后把判断翻译成可讨论的策略或场景。</p>
+        <Link href="/method">查看方法路径 <b>↗</b></Link>
+      </section>
+
+      <section className="project-list-v3">
+        <div className="section-heading"><p className="eyebrow"><i /> SELECTED CASES / 04</p><span>每个案例对应一项可回看的证据</span></div>
+        {projects.map((project) => <article className={`project-row project-${project.tone} project-${project.slug}`} key={project.href}><span className="project-no">{project.no}</span><div className="project-main"><p>{project.kind}</p><h2><Link href={project.href}>{project.title} <b>↗</b></Link></h2><span>{project.summary}</span><strong className="project-proof">关键证据：{project.proof}</strong>{project.output && <strong className="project-output">结果形态：{project.output}</strong>}{project.slug === 'driverless-trust' && <div className="project-credit"><b>第二作者｜独立完成问卷设计与全部统计建模，主责量化分析</b><span>研究到产品：证据重组、网页信息架构与交互可视化由本人设计实现</span></div>}<div className="method-chips">{project.methods.map((method) => <i key={method}>{method}</i>)}</div></div>{project.slug === 'driverless-trust' ? <div className="project-evidence-preview" aria-label="Q2 四组真实样本占比：23.9%、41.5%、13.0%、21.6%"><strong>Q2</strong><span>现实智驾经验分层</span><div className="q2-mini-bars">{[['1','23.9%'],['2','41.5%'],['3','13.0%'],['4','21.6%']].map(([group, value]) => <i key={group} style={{ '--q2-share': value } as CSSProperties}><b>{group}</b><em>{value}</em></i>)}</div></div> : <div className="project-mark" aria-hidden="true"><i /><i /><i /></div>}<div className="project-status" aria-label={`${project.title}内容状态`}>{project.states.map((state) => <span key={state}>{state}</span>)}</div></article>)}
+      </section>
+
+      <section className="home-method-entry"><div><p className="eyebrow"><i /> METHOD</p><h2>问题 → 证据 → 判断<br /><em>→ 策略 / 场景 → 验证</em></h2></div><p>方法页把这条路径和四个公开案例的对应关系放在一起，方便继续阅读。</p><Link href="/method">进入方法页 <b>→</b></Link></section>
+      <PortfolioFooter />
+    </main>
+  );
 }

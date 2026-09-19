@@ -1,5 +1,6 @@
 'use client';
 
+/* oxlint-disable jsx-a11y/prefer-tag-over-role -- 表单字段组：div+role=group 为字段组合约定实现 */
 import { useMemo } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 

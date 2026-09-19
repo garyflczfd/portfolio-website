@@ -1,5 +1,6 @@
 'use client';
 
+/* oxlint-disable jsx-a11y/prefer-tag-over-role, react-compiler -- 轮播 region/group 语义与 onSelect(api) 初始同步通知为 shadcn/Embla 标准实现 */
 import * as React from 'react';
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
