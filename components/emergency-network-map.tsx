@@ -41,12 +41,12 @@ export function EmergencyNetworkMap() {
   return <div className="emergency-map-reader" aria-label="低空血清配送研究图层阅读器">
     <div className="emergency-map-reader__map" role="img" aria-label={`杭州市主城区影像底图，当前显示：${activeNames.join('、') || '无图层'}`}>
       <div className="emergency-map-reader__imagery" />
-      {activeLayers.includes('constraints') && <img className="emergency-map-reader__constraint" src="/images/serum-dem-overlay.png" alt="" aria-hidden="true" />}
-      {activeLayers.includes('noFly') && <img className="emergency-map-reader__no-fly" src="/images/serum-no-fly-overlay.png" alt="" aria-hidden="true" />}
-      {activeLayers.includes('building') && <img className="emergency-map-reader__roads" src="/images/serum-building-overlay.png" alt="" aria-hidden="true" />}
-      {activeLayers.includes('population') && <img className="emergency-map-reader__roads" src="/images/serum-population-overlay.png" alt="" aria-hidden="true" />}
-      {activeLayers.includes('land') && <img className="emergency-map-reader__no-fly" src="/images/serum-land-use-overlay.png" alt="" aria-hidden="true" />}
-      {activeLayers.includes('roads') && <img className="emergency-map-reader__roads" src="/images/serum-road-overlay.png" alt="" aria-hidden="true" />}
+      {activeLayers.includes('constraints') && <img className="emergency-map-reader__constraint" src="/images/serum-dem-overlay.webp" alt="" aria-hidden="true" />}
+      {activeLayers.includes('noFly') && <img className="emergency-map-reader__no-fly" src="/images/serum-no-fly-overlay.webp" alt="" aria-hidden="true" />}
+      {activeLayers.includes('building') && <img className="emergency-map-reader__roads" src="/images/serum-building-overlay.webp" alt="" aria-hidden="true" />}
+      {activeLayers.includes('population') && <img className="emergency-map-reader__roads" src="/images/serum-population-overlay.webp" alt="" aria-hidden="true" />}
+      {activeLayers.includes('land') && <img className="emergency-map-reader__no-fly" src="/images/serum-land-use-overlay.webp" alt="" aria-hidden="true" />}
+      {activeLayers.includes('roads') && <img className="emergency-map-reader__roads" src="/images/serum-road-overlay.webp" alt="" aria-hidden="true" />}
       {pointLayers.flatMap(([layerId, points]) => activeLayers.includes(layerId) ? points.map((point, index) => <i className={`emergency-map-reader__point emergency-map-reader__point--${layerId}`} key={`${layerId}-${index}`} style={project(point)} aria-hidden="true" />) : [])}
       <div className="emergency-map-reader__scale" aria-label="比例尺约二十千米"><i /><span>20 km</span></div>
     </div>

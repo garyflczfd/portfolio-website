@@ -52,7 +52,7 @@ export function EmergencyNetworkEvidence() {
         <div className="emergency-copy"><p className="section-kicker">SCORING BOUNDARY</p><h3>适宜区，是模型中的通行条件，不是起飞许可。</h3><p>适宜性得分被划分为限制、低、较低、中、较高与高六档，再叠加禁飞条件与服务阻抗约束参与路径计算。它的作用是把复杂地表条件转成可比较的空间成本。</p><div className="emergency-note"><span>资料边界</span>研究使用静态空间数据，未纳入实时天气、临时空域限制、库存状态、调度能力或医院协作流程。</div></div>
       </TabsContent>
       <TabsContent value="output" className="emergency-panel">
-        <figure className="route-figure"><img src="/images/serum-route-clean.jpg" alt="杭州市主城区血清配送模型航线空间关系示意" /><figcaption>模型航线输出示意：以图中血清储备医院与路径关系，辅助比较空间覆盖与潜在配送方向。</figcaption></figure>
+        <figure className="route-figure"><img src="/images/serum-route-clean.webp" alt="杭州市主城区血清配送模型航线空间关系示意" /><figcaption>模型航线输出示意：以图中血清储备医院与路径关系，辅助比较空间覆盖与潜在配送方向。</figcaption></figure>
         <div className="emergency-copy"><p className="section-kicker">READING THE OUTPUT</p><h3>这是一张方案比较图，不是一张运行地图。</h3><p>输出综合了道路保障、潜在风险、候选起飞点与适飞性约束。它回答“在研究设定下，哪些方向值得优先进入下一轮评估”，不声称机构已采用、航线已获批或配送服务已发生。</p><div className="emergency-note"><span>下一步需要什么</span>若进入真实场景，需补足血清库存与调拨机制、起降场条件、飞行器性能、空域审批、应急流程及现场验证材料。</div></div>
       </TabsContent>
     </Tabs>

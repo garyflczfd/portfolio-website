@@ -13,7 +13,7 @@
 .emergency-map-reader__imagery {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(135deg, rgba(19, 37, 31, .16), rgba(19, 37, 31, .02) 47%, rgba(23, 43, 37, .2)), url('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=119.67708333333334%2C29.84875%2C120.72569444444446%2C30.565138888888885&bboxSR=4326&imageSR=4326&size=1600%2C1400&format=png32&f=image'), url('/images/serum-route-clean.jpg');
+  background-image: linear-gradient(135deg, rgba(19, 37, 31, .16), rgba(19, 37, 31, .02) 47%, rgba(23, 43, 37, .2)), url('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=119.67708333333334%2C29.84875%2C120.72569444444446%2C30.565138888888885&bboxSR=4326&imageSR=4326&size=1600%2C1400&format=png32&f=image'), url('/images/serum-route-clean.webp');
   background-size: 100% 100%;
   background-position: center;
   filter: saturate(.78) contrast(1.08);

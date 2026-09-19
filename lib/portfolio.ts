@@ -31,7 +31,7 @@ export const portfolioProjects: PortfolioProject[] = [
     premise: '以超果禅寺为文化起点，组织参访、停留与疗愈场景的连续关系。',
     proof: '文旅场景与空间叙事',
     output: '目标愿景 / 总体空间 / 节点场景',
-    cover: '/images/chaoguo-street-clean.png', featured: true, public: true,
+    cover: '/images/chaoguo-street-clean.webp', featured: true, public: true,
   },
   {
     slug: 'driverless-trust', no: '02', publicNo: '02', title: '自动驾驶信任机制研究', english: 'AUTONOMOUS MOBILITY · PRODUCT STRATEGY',
@@ -49,7 +49,7 @@ export const portfolioProjects: PortfolioProject[] = [
     premise: '把疾病风险、候选点与路径效率放进同一个空间决策框架。',
     proof: 'GIS 空间决策、可达性与约束',
     output: 'GIS 图层 / 候选点 / 模型航线',
-    cover: '/images/serum-route.png', coverPosition: 'center 53%', public: true,
+    cover: '/images/serum-route.webp', coverPosition: 'center 53%', public: true,
   },
   {
     slug: 'pingyao', no: '04', title: '瓶窑文旅空间策略', english: 'PINGYAO · CULTURAL STREET',
@@ -65,7 +65,7 @@ export const portfolioProjects: PortfolioProject[] = [
     premise: '让飞行采样、地形数据与村庄公共空间策略形成一条可追溯的链路。',
     proof: '无人机影测到空间方案的证据链',
     output: '影测影像 / 地形阅读 / 规划场景',
-    cover: '/images/huashu-field-web.png', coverPosition: 'center 62%', public: true,
+    cover: '/images/huashu-field-web.webp', coverPosition: 'center 62%', public: true,
   },
   {
     slug: 'ai-workflow', no: '06', title: 'AI 数字化工作流与产品化实践', english: 'DIGITAL PROTOTYPING',

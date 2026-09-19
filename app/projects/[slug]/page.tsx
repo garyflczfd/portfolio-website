@@ -24,9 +24,9 @@ const cases = {
 
 type CaseKey = keyof typeof cases;
 const caseCover: Partial<Record<CaseKey, string>> = {
-  daidong: '/images/chaoguo-model.png',
-  'emergency-network': '/images/serum-route-clean.jpg',
-  huashu: '/images/huashu-field-web.png',
+  daidong: '/images/chaoguo-model.webp',
+  'emergency-network': '/images/serum-route-clean.webp',
+  huashu: '/images/huashu-field-web.webp',
 };
 const publicCaseSlugs = new Set(publicPortfolioProjects.map((project) => project.slug));
 
@@ -89,7 +89,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     <section className="case-logic" aria-label="项目证据链">
       {[['问题', item.problem], ['证据', logic.evidence], ['判断', logic.judgement], ['策略', logic.strategy], ['可执行动作', logic.execution], ['个人贡献', logic.contribution]].map(([label, text], index) => <article key={label}><span>{String(index + 1).padStart(2, '0')}</span><h2>{label}</h2><p>{text}</p></article>)}
     </section>
-    {slug === 'daidong' ? <DaidongExplorer /> : slug === 'pingyao' ? <PingyaoExplorer /> : slug === 'driverless-trust' ? <DriverlessEvidence /> : slug === 'emergency-network' ? <EmergencyNetworkEvidence /> : slug === 'huashu' ? <HuashuFlightStory /> : <section className="case-content"><div className={`case-visual ${item.visual}`} aria-hidden="true">{item.visual === 'map' && <img src="/images/serum-site-selection.png" alt="" />}{item.visual !== 'map' && <><i /><i /><i /><b>{item.no}</b></>}</div><div className="case-copy"><article><p className="section-kicker">THE QUESTION</p><h2>先把问题说清楚。</h2><p>{item.problem}</p></article><article><p className="section-kicker">THE APPROACH</p><h2>把判断变成可读的过程。</h2><p>{item.action}</p></article><article><p className="section-kicker">PROJECT BOUNDARY</p><h2>项目方向与实施，明确区分。</h2><p>{item.outcome}</p></article></div></section>}
+    {slug === 'daidong' ? <DaidongExplorer /> : slug === 'pingyao' ? <PingyaoExplorer /> : slug === 'driverless-trust' ? <DriverlessEvidence /> : slug === 'emergency-network' ? <EmergencyNetworkEvidence /> : slug === 'huashu' ? <HuashuFlightStory /> : <section className="case-content"><div className={`case-visual ${item.visual}`} aria-hidden="true">{item.visual === 'map' && <img src="/images/serum-site-selection.webp" alt="" />}{item.visual !== 'map' && <><i /><i /><i /><b>{item.no}</b></>}</div><div className="case-copy"><article><p className="section-kicker">THE QUESTION</p><h2>先把问题说清楚。</h2><p>{item.problem}</p></article><article><p className="section-kicker">THE APPROACH</p><h2>把判断变成可读的过程。</h2><p>{item.action}</p></article><article><p className="section-kicker">PROJECT BOUNDARY</p><h2>项目方向与实施，明确区分。</h2><p>{item.outcome}</p></article></div></section>}
     <footer className="case-footer"><Link href="/projects">← 返回项目索引</Link><span>JIN KEYI · {publicCaseSlugs.has(slug) ? `${displayNo}/04` : '未公开项目'}</span></footer>
   </main>;
 }

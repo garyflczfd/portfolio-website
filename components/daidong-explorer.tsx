@@ -13,7 +13,7 @@ const nodes = [
     title: '超果禅寺｜从参访场所到体验起点',
     text: '超果禅寺所在的山前聚落，是岱东文化资源串联的起点。寺庙与村道、山林和邻里日常相接，为参访、漫游与后续停留体验建立了空间基底。',
     comparison: [
-      { label: '场景图', image: '/images/chaoguo-temple-scene-clean.jpg', alt: '超果禅寺禅意场景图', caption: '场景图 / 禅意庭院氛围' },
+      { label: '场景图', image: '/images/chaoguo-temple-scene-clean.webp', alt: '超果禅寺禅意场景图', caption: '场景图 / 禅意庭院氛围' },
     ],
   },
   {
@@ -24,7 +24,7 @@ const nodes = [
     title: '梵音书院｜把停留行为放进寺庙周边',
     text: '书院式停留单元置于寺庙周边，以阅读、休憩与文化体验承接参访后的时间，让文化锚点向日常可使用的公共场景延伸。',
     comparison: [
-      { label: '节点表达', image: '/images/chaoguo-street-clean.png', alt: '梵音书院节点效果图', caption: '节点效果图 / 梵音书院' },
+      { label: '节点表达', image: '/images/chaoguo-street-clean.webp', alt: '梵音书院节点效果图', caption: '节点效果图 / 梵音书院' },
     ],
   },
   {
@@ -35,7 +35,7 @@ const nodes = [
     title: '六感疗愈｜把节点接入可讨论的业态框架',
     text: '将文化、商业、旅游与居养组织为“六感疗愈”的场景系统，让空间不止于参观，也能承接慢游、体验与持续停留。',
     comparison: [
-      { label: '场景图', image: '/images/chaoguo-healing-scene-clean.jpg', alt: '六感疗愈场景图', caption: '场景图 / 六感疗愈' },
+      { label: '场景图', image: '/images/chaoguo-healing-scene-clean.webp', alt: '六感疗愈场景图', caption: '场景图 / 六感疗愈' },
     ],
   },
 ] as const;
@@ -52,7 +52,7 @@ export function DaidongExplorer() {
   return <section className="daidong-narrative" aria-label="岱东案例叙事">
     <section className="daidong-vision" aria-labelledby="daidong-vision-title">
       <div className="daidong-section-head"><div><p className="section-kicker">01 / TARGET VISION</p><h2 id="daidong-vision-title">先让读者看见，<br /><em>项目想抵达哪里。</em></h2></div><p>以一张项目目标愿景图先建立终局画面，再回到目标、总图与节点。图中内容属于方案方向，不是实施或运营结果。</p></div>
-      <figure className="daidong-vision-figure"><img src="/images/chaoguo-target-vision-clean.jpg" alt="超果禅境疗愈原乡目标愿景图" /><figcaption><span>项目方向 / 目标愿景</span><b>超果禅境 · 疗愈原乡</b></figcaption></figure>
+      <figure className="daidong-vision-figure"><img src="/images/chaoguo-target-vision-clean.webp" alt="超果禅境疗愈原乡目标愿景图" /><figcaption><span>项目方向 / 目标愿景</span><b>超果禅境 · 疗愈原乡</b></figcaption></figure>
       <div className="daidong-goals" aria-label="团队策略目标">
         <article><b>01</b><h3>文化锚点</h3><p>以超果禅学与寺庙空间建立目的地识别，而非仅展示单一古迹。</p></article>
         <article><b>02</b><h3>体验路径</h3><p>把参访、停留、休憩与文化体验组织成可连续感知的场景。</p></article>
@@ -63,7 +63,7 @@ export function DaidongExplorer() {
     <section className="daidong-masterplan" aria-labelledby="daidong-masterplan-title">
       <div className="daidong-section-head"><div><p className="section-kicker">02 / MASTER PLAN READING</p><h2 id="daidong-masterplan-title">再从总体空间，<br /><em>读到具体单元。</em></h2></div><p>以超果禅寺、梵音书院与六感疗愈三类空间单元，组织文化参访、日常停留与场景体验之间的关系。点击图上点位，展开对应的空间表达。</p></div>
       <figure className="daidong-masterplan-figure">
-        <img src="/images/chaoguo-masterplan-study.png" alt="超果禅寺及周边总体空间示意" />
+        <img src="/images/chaoguo-masterplan-study.webp" alt="超果禅寺及周边总体空间示意" />
         {nodes.map((node) => <button key={node.id} type="button" className={`daidong-hotspot hotspot-${node.id.replace('node-', '')} ${activeId === node.id ? 'is-active' : ''}`} onClick={() => showNode(node.id)} aria-pressed={activeId === node.id}><span>{node.number}</span><b>{node.mapLabel}</b><i>+</i></button>)}
         <figcaption><span>总体空间示意</span></figcaption>
       </figure>

@@ -42,10 +42,10 @@ export default function Home() {
 
       <section className="portfolio-cover" id="profile" aria-labelledby="profile-title">
         <div className="portfolio-cover__mosaic" aria-hidden="true">
-          <img className="cover-asset cover-asset--space" src="/images/chaoguo-aerial.png?v=3" alt="" />
-          <img className="cover-asset cover-asset--gis" src="/images/serum-route-clean.jpg" alt="" />
-          <img className="cover-asset cover-asset--research" src="/images/chaoguo-temple-scene-clean.jpg" alt="" />
-          <img className="cover-asset cover-asset--scene" src="/images/chaoguo-street-clean.png?v=1" alt="" />
+          <img className="cover-asset cover-asset--space" src="/images/chaoguo-aerial.webp?v=3" alt="" />
+          <img className="cover-asset cover-asset--gis" src="/images/serum-route-clean.webp" alt="" />
+          <img className="cover-asset cover-asset--research" src="/images/chaoguo-temple-scene-clean.webp" alt="" />
+          <img className="cover-asset cover-asset--scene" src="/images/chaoguo-street-clean.webp?v=1" alt="" />
         </div>
         <div className="portfolio-cover__veil" aria-hidden="true" />
         <div className="portfolio-cover__content">
